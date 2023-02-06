@@ -1,4 +1,4 @@
-## Learning Journal
+# Learning Journal
 ### Problem:
 Store infomation about items and what ones that you can craft at the given time.
 
