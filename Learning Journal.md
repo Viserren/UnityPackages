@@ -1,3 +1,4 @@
+## Learning Journal
 ### Problem:
 Store infomation about items and what ones that you can craft at the given time.
 
@@ -22,5 +23,5 @@ So out of ideas i tried using a Vector3 instead of a collider and its .size whic
 ### Problem:
 Had to make it so it listed all the required items in a list, where it shpwed the amount you need and the item type.
 
-## Solution
+### Solution
 I used a dictionary to to check if there was a entry for that required item, if not it will add to the dictionary, but if there was already one in there it would increase it by 1. Which then meant i had a dictionary full of items and the amount they need, which i used a foreach loop to then convert them to a string and add them to a text box.
