@@ -18,3 +18,9 @@ I also encountered a issue with the Physics.OverlapCube where it wasnt detecting
 
 ### Solution:
 So out of ideas i tried using a Vector3 instead of a collider and its .size which worked.
+
+### Problem:
+Had to make it so it listed all the required items in a list, where it shpwed the amount you need and the item type.
+
+## Solution
+I used a dictionary to to check if there was a entry for that required item, if not it will add to the dictionary, but if there was already one in there it would increase it by 1. Which then meant i had a dictionary full of items and the amount they need, which i used a foreach loop to then convert them to a string and add them to a text box.
