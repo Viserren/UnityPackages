@@ -29,5 +29,8 @@ I used a dictionary to to check if there was a entry for that required item, if 
 ### Problem:
 The mesh generator wasnt generating the meshes, when the callback was being called in the current thread.
 
-## Solution:
+### Solution:
 It was because the thread wasnt being started.
+
+### Problem:
+Getting the different colours in a shader graph to correctly fade between 2 colours depending on the fade distance and normals.
