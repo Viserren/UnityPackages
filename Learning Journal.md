@@ -40,3 +40,6 @@ The sun not rotating properly around, and snapping to certian position.
 
 ### Solution:
 Using a animation curve and lerping between two Quaternion's using the animation curve, it now smoothly rotates around and changes its angle depending on the season.
+
+### Problem:
+The sun is the opersite direction then it should be at the corisponding time.
