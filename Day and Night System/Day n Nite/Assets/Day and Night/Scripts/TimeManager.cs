@@ -21,11 +21,12 @@ public class TimeManager : MonoBehaviour
     private DateTime dateTime;
 
     [Header("Tick Settings")]
-    public int randomTickSpeed = 3;
-    public float advanceTimeIncrement = 7.2f;
-    //private float currentRandomTimeSpeed = 0;
+    //public int randomTickSpeed = 3;
+    public float advanceTimeIncrement = 4.24f;
 
-    public static UnityAction<DateTime> OnDateChanged;
+    [Header("Events")]
+    public UnityEvent<DateTime> OnDateChanged;
+    // Add evnts here
 
     private void Awake()
     {
@@ -34,20 +35,9 @@ public class TimeManager : MonoBehaviour
 
     private void Start()
     {
-        OnDateChanged?.Invoke(dateTime);
+        OnDateChanged.Invoke(dateTime);
         StartCoroutine(StartTime());
     }
-
-    //private void Update()
-    //{
-    //    currentRandomTimeSpeed += Time.deltaTime / 20;
-    //    Debug.Log(currentRandomTimeSpeed);
-    //    if (currentRandomTimeSpeed >= 1)
-    //    {
-    //        currentRandomTimeSpeed = 0;
-    //        Tick();
-    //    }
-    //}
 
     IEnumerator StartTime()
     {

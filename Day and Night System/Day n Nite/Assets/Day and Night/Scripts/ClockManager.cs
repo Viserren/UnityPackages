@@ -26,29 +26,11 @@ public class ClockManager : MonoBehaviour
         sunStartingRotation = sunLight.transform.eulerAngles.z;
     }
 
-    private void OnEnable()
+    public void UpdateDateTime(DateTime dateTime)
     {
-        TimeManager.OnDateChanged += UpdateDateTime;
-    }
-
-    private void OnDisable()
-    {
-        TimeManager.OnDateChanged -= UpdateDateTime;
-    }
-
-    private void UpdateDateTime(DateTime dateTime)
-    {
-        Date.text = dateTime.DateToString();
-        Time.text = dateTime.TimeAMPMToString();
-        Season.text = dateTime.Season.ToString();
-        Week.text = $"Week: {dateTime.CurrentWeek.ToString()}";
-        //weatherSprite.sprite = weatherSprites[(int)]
-
         float t = (float)dateTime.Hours / 24f;
         float pos = (float)dateTime.CurrentWeek / 16;
-        float newRotation = Mathf.Lerp(0,360,t);
-        Debug.Log(newRotation);
-        //ClockFace.localEulerAngles = new Vector3(0, 0, newRotation + startingRotation);
+        float newRotation = Mathf.Lerp(-180, 180, t);
 
         // Winter 20
         // Autumn 40
@@ -59,6 +41,31 @@ public class ClockManager : MonoBehaviour
         Quaternion highAngle = Quaternion.Euler(80, 0, 0) * Quaternion.Euler(0, newRotation + sunStartingRotation, 0);
 
         float sunPos = sunHeightCurve.Evaluate(pos);
-        sunLight.transform.rotation = Quaternion.Lerp(lowAngle, highAngle,sunPos);
+        float sunIntensity = dayNightCurve.Evaluate(t);
+        if (sunLight)
+        {
+            sunLight.transform.rotation = Quaternion.Lerp(lowAngle, highAngle, sunPos);
+            sunLight.intensity = Mathf.Lerp(nightIntensity, dayIntensity, sunIntensity);
+        }
+    }
+
+    public void UpdateUI(DateTime dateTime)
+    {
+        if (Date)
+        {
+            Date.text = dateTime.DateToString();
+        }
+        if (Time)
+        {
+            Time.text = dateTime.TimeAMPMToString();
+        }
+        if (Season)
+        {
+            Season.text = dateTime.Season.ToString();
+        }
+        if (Week)
+        {
+            Week.text = $"Week: {dateTime.CurrentWeek.ToString()}";
+        }
     }
 }
