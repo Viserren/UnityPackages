@@ -8,7 +8,6 @@ namespace CraftingSystem
 {
     public class CraftingTable : MonoBehaviour
     {
-        //[SerializeField] private BoxCollider PlacedItemsArea;
         [SerializeField] private Vector3 PlacedItemsArea;
         public SO_CraftingRecipe CurrentRecipe { get; private set; }
         public SO_ItemList ItemList;
@@ -65,7 +64,7 @@ namespace CraftingSystem
                 }
                 else
                 {
-                    //Debug.Log("Not Craftale");
+
                 }
             }
 

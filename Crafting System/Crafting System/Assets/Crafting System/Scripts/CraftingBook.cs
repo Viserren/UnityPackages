@@ -8,7 +8,6 @@ namespace CraftingSystem
 {
     public class CraftingBook : MonoBehaviour
     {
-        public UnityEvent<SO_CraftingRecipe> ChangeCraftingRecipe;
         public SO_ItemList ItemList;
         public GameObject ItemTemplate;
         public Transform BookPages;
