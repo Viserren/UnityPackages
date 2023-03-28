@@ -43,3 +43,6 @@ Using a animation curve and lerping between two Quaternion's using the animation
 
 ### Problem:
 The sun is the opersite direction then it should be at the corisponding time.
+
+### Solution:
+Had to 
