@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace CraftingSystem
 {
-    public class SO_ItemHolder : MonoBehaviour
+    public class ItemHolder : MonoBehaviour
     {
         [field: SerializeField] public SO_Items Item { get; private set; }
     }

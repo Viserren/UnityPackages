@@ -30,13 +30,13 @@ ___
 - Advance Time Increment (ATI)
     - This is how fast the day goes by. Default for this is 4.24 which means each day would last about 17 minutes. But this can be changed if you want so the can can be longer or shorter.
 ### Events
-- On Date Changed
+- #### On Date Changed
     - This will be called every `0.05f` when `Tick()` is called when time is advancing. You can hookup anything to this event that takes in a `DateTime` variable.
 
 - You could for instance create a event that is called when the season changes you could add an Event into the `TimeManager` Script under the `[Header("Events")]` thats called `OnSeasonChanged` that takes in a `int` which you can then invoke in `AdvanceSeason()`. This could also be done for all of the different functions in `Time Advacement` where each of them fires a different event.
 ___
 ### **Clock Manager**
-This script is called when the `OnDateChanged` is called and then updates the UI and lights accordingly.
+This script is called when the [`OnDateChanged`](#on-date-changed) is called and then updates the UI and lights accordingly.
 - Date
     - This is where you would put your text to display the current Date.
 - Time

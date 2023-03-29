@@ -27,18 +27,20 @@ namespace CraftingSystem
 
         public IEnumerator Craft(List<Collider> craftingCollider)
         {
-            yield return new WaitForSeconds(CurrentRecipe.TimeToCraft);
             if (CurrentRecipe != null)
             {
+                yield return new WaitForSeconds(CurrentRecipe.TimeToCraft);
                 List<SO_Items> inputItems = new List<SO_Items>(CurrentRecipe.ItemsNeeded);
                 List<GameObject> usedItems = new List<GameObject>();
+#if UNITY_EDITOR
                 foreach (var item in inputItems)
                 {
                     Debug.Log($"Items needed: {item.name}");
                 }
+#endif
                 foreach (Collider collider in craftingCollider)
                 {
-                    if (collider.TryGetComponent(out SO_ItemHolder item))
+                    if (collider.TryGetComponent(out ItemHolder item))
                     {
                         Debug.Log($"Item before use: {item.Item}");
                         if (CurrentRecipe.ItemsNeeded.Contains(item.Item) && inputItems.Count > 0)
@@ -62,12 +64,8 @@ namespace CraftingSystem
                     }
                     usedItems.Clear();
                 }
-                else
-                {
-
-                }
             }
-
+            yield return null;
         }
 
         public void SetCurrentRecipe(SO_CraftingRecipe selectedRecipe)
