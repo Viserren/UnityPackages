@@ -8,7 +8,6 @@ ___
 ## **How To Use**:
 ___
 ## **Main Scripts**:
-___
 ### **Crafting Book**:
 When the game starts it will go through all the recipies in the [`Item List`](#so_itemlist) and add a button to the crafting book with all the appropiate infomation using the function `SetInfo`.
 ### Book Settings:
@@ -53,18 +52,18 @@ This scriptable object holds the data for the item recipe.
 - Time To Craft
     - How long it takes to craft this item. This could be linked up to UI to show how long it has left before finishing the crafting.
 
-### **SO_Items**:
-This holds the data for the items in the game.
-- Item Name
-    - This is just the name for the current item.
-- Item Picture
-    - The item picture that could show in the inventory or to show what item your about to craft.
-- Type
-    - The type of item about to craft, as displayed in [`Item Type`](#item-type)
-- Is Cookable
-    - This allows items to be cookable, for instance if you added a cooking system in and wanted certian items to be cooked in order to get other items.
-- Item Prefab
-    - The item prefab that you want to be linked to this specific item.
+    ### **SO_Items**:
+    This holds the data for the items in the game.
+    - Item Name
+        - This is just the name for the current item.
+    - Item Picture
+        - The item picture that could show in the inventory or to show what item your about to craft.
+    - Type
+        - The type of item about to craft, as displayed in [`Item Type`](#item-type)
+    - Is Cookable
+        - This allows items to be cookable, for instance if you added a cooking system in and wanted certian items to be cooked in order to get other items.
+    - Item Prefab
+        - The item prefab that you want to be linked to this specific item.
 ___
 ## **Other Scripts**:
 ### **Set Item Button**:
