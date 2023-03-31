@@ -1,6 +1,18 @@
 [Back](../../../../README.md)
 # **Documentation**
-
+## **Contents**
+1) ### [Required Packages](#required-packages)
+2) ### [How To Use](#how-to-use)
+3) ### [Main Scripts](#main-scripts)
+    1) #### [Crafting Book](#crafting-book)
+4) ### [Scriptable Objects](#scriptable-objects)
+    1) #### [Item List](#item-list)
+    2) #### [Crafting Recipie](#crafting-recipie)
+    3) #### [Items](#items)
+5) ### [Other Scripts](#other-scripts)
+    1) #### [Item Button](#set-item-button)
+    2) #### [Set Item Button](#set-item-button)
+    3) #### [Item Holder](#item-holder)
 ## **Required Packages**:
 
 - ### Textmesh Pro
