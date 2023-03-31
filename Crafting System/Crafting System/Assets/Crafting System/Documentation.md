@@ -1,25 +1,27 @@
 [Back](../../../../README.md)
 # **Documentation**
 ## **Contents**
-1) ### [Required Packages](#required-packages)
-2) ### [How To Use](#how-to-use)
-3) ### [Main Scripts](#main-scripts)
-    1) #### [Crafting Book](#crafting-book)
-4) ### [Scriptable Objects](#scriptable-objects)
-    1) #### [Item List](#item-list)
-    2) #### [Crafting Recipie](#crafting-recipie)
-    3) #### [Items](#items)
-5) ### [Other Scripts](#other-scripts)
-    1) #### [Item Button](#set-item-button)
-    2) #### [Set Item Button](#set-item-button)
-    3) #### [Item Holder](#item-holder)
+1) ### [Required Packages](#required-packages-1)
+2) ### [How To Use](#how-to-use-1)
+3) ### [Main Scripts](#main-scripts-1)
+    1) #### [Crafting Book](#crafting-book-1)
+4) ### [Scriptable Objects](#scriptable-objects-1)
+    1) #### [Item List](#item-list-1)
+    2) #### [Crafting Recipie](#crafting-recipie-1)
+    3) #### [Items](#items-1)
+5) ### [Other Scripts](#other-scripts-1)
+    1) #### [Item Button](#set-item-button-1)
+    2) #### [Set Item Button](#set-item-button-1)
+    3) #### [Item Holder](#item-holder-1)
 ## **Required Packages**:
 
 - ### Textmesh Pro
 ___
 ## **How To Use**:
+#### [Back To Top](#documentation)
 ___
 ## **Main Scripts**:
+#### [Back To Top](#documentation)
 ### **Crafting Book**:
 When the game starts it will go through all the recipies in the [`Item List`](#so_itemlist) and add a button to the crafting book with all the appropiate infomation using the function `SetInfo`.
 ### Book Settings:
@@ -45,6 +47,7 @@ In the function `Craft` it checks to see if you have selected a recipe if you ha
     - Will only detect items with this mask
 ___
 ## **Scriptable Objects**:
+#### [Back To Top](#documentation)
 ### **SO_ItemList**:
 This scriptable object holds the data for all of the items and item recipes that can be crafted.
 - All Items
@@ -78,6 +81,7 @@ This holds the data for the items in the game.
     - The item prefab that you want to be linked to this specific item.
 ___
 ## **Other Scripts**:
+#### [Back To Top](#documentation)
 ### **Set Item Button**:
 This script is in charge of setting the correct infomation on the corisponding button, so it displays the right infomation, and when clicked sets the correct recipe to craft.
 ___

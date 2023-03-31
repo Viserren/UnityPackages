@@ -1,13 +1,20 @@
 [Back](../../../../README.md)
 # **Documentation**
-
+## **Contents**
+1) ### [Required Packages](#required-packages-1)
+2) ### [How To Use](#how-to-use-1)
+3) ### [Main Scripts](#main-scripts-1)
+4) ### [Scriptable Objects](#scriptable-objects-1)
+5) ### [Other Scripts](#other-scripts-1)
 ## **Required Packages**:
 
 - ### Textmesh Pro
 ___
 ## **How To Use**:
+#### [Back To Top](#documentation)
 ___
 ## **Main Scripts**:
+#### [Back To Top](#documentation)
 ### **Time Manager**:
 ### Date Settings:
 - Date in Month
@@ -38,6 +45,7 @@ ___
 - You could for instance create a event that is called when the season changes you could add an Event into the `TimeManager` Script under the `[Header("Events")]` thats called `OnSeasonChanged` that takes in a `int` which you can then invoke in `AdvanceSeason()`. This could also be done for all of the different functions in `Time Advacement` where each of them fires a different event.
 ___
 ### **Clock Manager**
+#### [Back To Top](#documentation)
 This script is called when the [`OnDateChanged`](#on-date-changed) is called and then updates the UI and lights accordingly.
 - Date
     - This is where you would put your text to display the current Date.

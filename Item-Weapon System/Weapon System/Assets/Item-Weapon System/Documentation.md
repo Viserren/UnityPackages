@@ -1,11 +1,17 @@
 [Back](../../../../README.md)
 # **Documentation**
-
+## **Contents**
+1) ### [Required Packages](#required-packages-1)
+2) ### [How To Use](#how-to-use-1)
+3) ### [Main Scripts](#main-scripts-1)
+4) ### [Scriptable Objects](#scriptable-objects-1)
+5) ### [Other Scripts](#other-scripts-1)
 ## **Required Packages**:
 
 - ### N/A
 ___
 ## **How To Use**:
+#### [Back To Top](#documentation)
 You shouldn't need to touch any of the core scripts in this package, nor the Scriptable object scripts, as this can cause errors in the custom inspector.
 
 ### **ATTENTION When implementing into your own project make sure the "Data" folder is in the "Item-Weapon System/" directory and contains "Item", "Melee" and "Gun" folders as this is where it will create all of the different items and weapons.**
