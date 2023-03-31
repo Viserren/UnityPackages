@@ -4,8 +4,6 @@
 1) ### [Required Packages](#required-packages-1)
 2) ### [How To Use](#how-to-use-1)
 3) ### [Main Scripts](#main-scripts-1)
-4) ### [Scriptable Objects](#scriptable-objects-1)
-5) ### [Other Scripts](#other-scripts-1)
 ## **Required Packages**:
 
 - ### Textmesh Pro
