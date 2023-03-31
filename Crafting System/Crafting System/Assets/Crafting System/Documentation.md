@@ -6,6 +6,8 @@
 ___
 ## **How To Use**:
 ___
+## **Main Scripts**:
+___
 ### **Crafting Book**:
 When the game starts it will go through all the recipies in the [`Item List`](#so_itemlist) and add a button to the crafting book with all the appropiate infomation using the function `SetInfo`.
 ### Book Settings:
@@ -30,18 +32,8 @@ In the function `Craft` it checks to see if you have selected a recipe if you ha
 - Items Mask
     - Will only detect items with this mask
 ___
-### **Set Item Button**:
-This script is in charge of setting the correct infomation on the corisponding button, so it displays the right infomation, and when clicked sets the correct recipe to craft.
-___
-### **Item Type**:
-This is just a class that holds a enum to determin the different types of items. This could be changed in the future to hold more or less depending on your use case.
-___
-### **ItemHolder**:
-This just goes onto item prefabs to hold the Scriptable Objects data for the specific item. 
-___
-### **Scriptable Objects**:
-
-### SO_ItemList:
+## **Scriptable Objects**:
+### **SO_ItemList**:
 This scriptable object holds the data for all of the items and item recipes that can be crafted.
 - All Items
     - Holds all the possible items that can be in the game.
@@ -49,7 +41,7 @@ This scriptable object holds the data for all of the items and item recipes that
     - This is all the recipes that are in the game, that can be used by the player.
 - Learnt Recipes
     - This is just a placeholder for a idea what you could add. As you could add a way to learn recipes and only display those and let the player craft only learnt recipes.
-### SO_CraftingRecipe:
+### **SO_CraftingRecipe**:
 This scriptable object holds the data for the item recipe.
 - Item To Craft
     - This is the item that will be made when the crafting has taken place after the time given.
@@ -60,7 +52,7 @@ This scriptable object holds the data for the item recipe.
 - Time To Craft
     - How long it takes to craft this item. This could be linked up to UI to show how long it has left before finishing the crafting.
 
-### SO_Items:
+### **SO_Items**:
 This holds the data for the items in the game.
 - Item Name
     - This is just the name for the current item.
@@ -72,3 +64,14 @@ This holds the data for the items in the game.
     - This allows items to be cookable, for instance if you added a cooking system in and wanted certian items to be cooked in order to get other items.
 - Item Prefab
     - The item prefab that you want to be linked to this specific item.
+___
+## **Other Scripts**:
+### **Set Item Button**:
+This script is in charge of setting the correct infomation on the corisponding button, so it displays the right infomation, and when clicked sets the correct recipe to craft.
+___
+### **Item Type**:
+This is just a class that holds a enum to determin the different types of items. This could be changed in the future to hold more or less depending on your use case.
+___
+### **ItemHolder**:
+This just goes onto item prefabs to hold the Scriptable Objects data for the specific item. 
+___

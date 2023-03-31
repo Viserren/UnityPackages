@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -898,8 +898,12 @@ MonoBehaviour:
     visibleDistanceThreshold: 100
   - lod: 1
     visibleDistanceThreshold: 250
+  - lod: 2
+    visibleDistanceThreshold: 500
   - lod: 3
-    visibleDistanceThreshold: 400
+    visibleDistanceThreshold: 750
+  - lod: 4
+    visibleDistanceThreshold: 1000
   meshSettings: {fileID: 11400000, guid: 4384181f3b797a547841c879c983a84e, type: 2}
   heightMapSettings: {fileID: 11400000, guid: f6c2f534ea62efa498977003a4d93404, type: 2}
   isEndless: 1
