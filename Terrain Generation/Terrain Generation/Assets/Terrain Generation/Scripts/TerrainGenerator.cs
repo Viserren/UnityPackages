@@ -22,7 +22,7 @@ namespace TerrainGeneration
         public Transform viewer;
         public Material mapMaterial;
 
-        public Vector2 viewerPosition;
+        private Vector2 viewerPosition;
         Vector2 viewerPositionOld;
         float meshWorldSize;
         int chunksVisibleInViewDistance;
