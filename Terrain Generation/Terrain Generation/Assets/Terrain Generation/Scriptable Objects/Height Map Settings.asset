@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 935b348f3ceacae4cab25e32a997fb1b, type: 3}
   m_Name: Height Map Settings
   m_EditorClassIdentifier: 
-  autoUpdate: 0
+  autoUpdate: 1
   noiseSettings:
     normalizeMode: 1
-    scale: 50
+    scale: 100
     octaves: 6
     persistance: 0.6
     lacunarity: 2
     offset: {x: 0, y: 0}
-    seed: 999481487
+    seed: 385319784
   useFalloff: 1
   heightMultiplier: 60
   heightCurve:
