@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.1273174, g: 0.13414761, b: 0.12107885, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1825,6 +1825,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6161037082642090059, guid: abbcc7ff960c2a94bbba5e56ade95b4b, type: 3}
+      propertyPath: hours
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6161037082642090059, guid: abbcc7ff960c2a94bbba5e56ade95b4b, type: 3}
       propertyPath: OnDateChanged.m_PersistentCalls.m_Calls.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -1953,5 +1957,9 @@ PrefabInstance:
       propertyPath: sunLight
       value: 
       objectReference: {fileID: 705507994}
+    - target: {fileID: 8265886694113761599, guid: d4b6bf381539dfa43898c8c1c40e38cd, type: 3}
+      propertyPath: timeToUseWhenUpdating
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4b6bf381539dfa43898c8c1c40e38cd, type: 3}

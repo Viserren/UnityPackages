@@ -74,6 +74,8 @@ public struct DateTime
 
     private Seasons season;
 
+    private float totalNumberOfSecondsInDay;
+    private int totalNumberOfMinutesInDay;
     private int totalNumberOfdays;
     private int totalNumberOfWeeks;
     #endregion
@@ -86,6 +88,8 @@ public struct DateTime
     public float Seconds => seconds;
     public Seasons Season => season;
     public int Year => year;
+    public float TotalNumberOfSecondsInDay => totalNumberOfSecondsInDay;
+    public int TotalNumberOfMinutesInDay => totalNumberOfMinutesInDay;
     public int TotalNumberOfDays => totalNumberOfdays;
     public int TotalNumberOfWeeks => totalNumberOfWeeks;
     public int CurrentWeek => totalNumberOfWeeks % 16 == 0 ? 16 : totalNumberOfWeeks % 16;
@@ -105,7 +109,8 @@ public struct DateTime
         this.seconds = seconds;
 
         totalNumberOfdays = date + (28 * (int)this.season) + (112 * (year - 1));
-
+        totalNumberOfMinutesInDay = (60 * hours) + minutes;
+        totalNumberOfSecondsInDay = (totalNumberOfMinutesInDay * 60) + seconds;
         totalNumberOfWeeks = 1 + totalNumberOfdays / 7;
     }
     #endregion
@@ -114,6 +119,7 @@ public struct DateTime
     public void AdvanceSeconds(float secondsToAdvanceBy)
     {
         seconds += secondsToAdvanceBy;
+        totalNumberOfSecondsInDay += secondsToAdvanceBy;
         if (seconds >= 60)
         {
             AdvanceMinutes((int)seconds / 60);
@@ -130,6 +136,7 @@ public struct DateTime
         else
         {
             minutes += minutesToAdvanceBy;
+            totalNumberOfMinutesInDay += minutesToAdvanceBy;
         }
 
     }
@@ -158,6 +165,8 @@ public struct DateTime
             date = 1;
         }
         totalNumberOfdays++;
+        totalNumberOfMinutesInDay = 0;
+        totalNumberOfSecondsInDay = 0;
     }
 
     void AdvanceSeason()
