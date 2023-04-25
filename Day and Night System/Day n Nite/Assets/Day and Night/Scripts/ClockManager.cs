@@ -42,8 +42,8 @@ public class ClockManager : MonoBehaviour
         // Spring 60
         // Summer 80
 
-        Quaternion lowAngle = Quaternion.Euler(20, 0, 0) * Quaternion.Euler(0, newRotation + sunStartingRotation, 0);
-        Quaternion highAngle = Quaternion.Euler(80, 0, 0) * Quaternion.Euler(0, newRotation + sunStartingRotation, 0);
+        Quaternion lowAngle = Quaternion.Euler(20, 0, 0) * Quaternion.Euler(0, newRotation + sunStartingRotation, 0); // this is the lowest point of the sun
+        Quaternion highAngle = Quaternion.Euler(80, 0, 0) * Quaternion.Euler(0, newRotation + sunStartingRotation, 0); // this is the highest point of the sun
 
         float sunPos = sunHeightCurve.Evaluate(pos);
         float sunIntensity = dayNightCurve.Evaluate(t(dateTime));
@@ -56,18 +56,19 @@ public class ClockManager : MonoBehaviour
 
     float t(DateTime dateTime)
     {
+        // switch statement to determine which time to use
         switch (timeToUseWhenUpdating)
         {
             case TimeToUseWhenUpdating.seconds:
-                tSeconds = (float)dateTime.TotalNumberOfSecondsInDay / 86400f;
+                tSeconds = (float)dateTime.TotalNumberOfSecondsInDay / 86400f; // 86400 seconds in a day
                 Debug.Log(tSeconds);
                 return tSeconds;
             case TimeToUseWhenUpdating.minutes:
-                tMinutes = (float)dateTime.TotalNumberOfMinutesInDay / 1440f;
+                tMinutes = (float)dateTime.TotalNumberOfMinutesInDay / 1440f; // 1440 minutes in a day
                 Debug.Log(tMinutes);
                 return tMinutes;
             case TimeToUseWhenUpdating.hours:
-                tHours = (float)dateTime.Hours / 24f;
+                tHours = (float)dateTime.Hours / 24f; // 24 hours in a day
                 Debug.Log(tHours);
                 return tHours;
 
